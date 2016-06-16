@@ -1,11 +1,7 @@
-
-
-
-
 <?php
 
 //create connection    (host, username, password, dbname)
-$conn = mysqli_connect('mysql.wminnovation.xyz', 'aleisha_walmart', 'Sharkey001', 'iamerica_db');
+$conn = mysqli_connect('mysql.wminnovation.xyz', 'aleisha_walmart', '*******', 'iamerica_db');
 
 //check connection
 if ($conn)
