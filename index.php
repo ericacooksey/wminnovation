@@ -1,5 +1,7 @@
 <?php
 
+// random comment
+
 //create connection    (host, username, password, dbname)
 $conn = mysqli_connect('mysql.wminnovation.xyz', 'aleisha_walmart', '*******', 'iamerica_db');
 
