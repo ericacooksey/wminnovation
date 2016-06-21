@@ -41,7 +41,6 @@ if (!$result) {
 	 }
    //if $method = 'DELETE'
  else {
-       echo mysqli_affected_rows($link);
        http_response_code(204);
  	}
 //close  connection
