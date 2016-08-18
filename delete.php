@@ -2,21 +2,21 @@
 $method = $_SERVER['REQUEST_METHOD'];
 
 //conect to the dreamhost database
-$link = mysqli_connect('mysql.wminnovation.xyz', 'aleisha_walmart', 'Sharkey001', 'iamerica_db');
+$link = mysqli_connect('mysql.wminnovation.xyz', 'aleisha_walmart', '******', 'iamerica_db');
 mysqli_set_charset($link, 'utf8');
 
-$key = $_GET['storeID'];
+$key = $_GET['cid'];
 echo $key;
 //Create SQL based on HTTP method
 switch ($method) {
   case 'GET':
-      $sql = "SELECT Message FROM notifications WHERE storeID='$key'";
+      $sql = "SELECT Message FROM notifications WHERE cid='$key'";
       break;
   case 'POST':
-     $sql = "INSERT into notifications VALUES ('$storeid', '$msg', '$walmarturi')";
+     $sql = "INSERT into notifications VALUES ('$storeid', '$msg', '$walmarturi', '$cid', '$itemName', '$price')";
       break;
   case 'DELETE':
-     $sql = "DELETE FROM  notifications where storeID='$key'";
+     $sql = "DELETE FROM  notifications where cid='$key'";
        break;
 }
 

@@ -5,23 +5,22 @@ $method = $_SERVER['REQUEST_METHOD'];
 
 header('Content-Type: application/json');
 //conect to the dreamhost database
-$link = mysqli_connect('mysql.wminnovation.xyz', 'aleisha_walmart', 'Sharkey001', 'iamerica_db');
+$link = mysqli_connect('mysql.wminnovation.xyz', 'aleisha_walmart', '********', 'iamerica_db');
 
 mysqli_set_charset($link, 'utf8');
 
-$key = $_GET['storeID'];
+$key = $_GET['cid'];
 
 
 //Create SQL based on HTTP method
 switch ($method) {
   case 'GET':
-      $sql = "SELECT Message FROM notifications WHERE storeID='$key'";
+      $sql = "SELECT * FROM notifications WHERE cid='$key'";
       break;
- //  case 'POST':
-      // $sql = "INSERT into notifications set $set";   --not sure we want to set this value to null, in case of other drivers driving by
-      //break;
+ // casae 'POST':
+	//break;
   case 'DELETE':
-     $sql = "DELETE notifications where storeID=$key";
+     $sql = "DELETE notifications where cid='$key'";
        break;
 }
 
