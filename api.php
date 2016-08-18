@@ -5,7 +5,7 @@ $method = $_SERVER['REQUEST_METHOD'];
 
 header('Content-Type: application/json');
 //conect to the dreamhost database
-$link = mysqli_connect('mysql.wminnovation.xyz', 'aleisha_walmart', 'Sharkey001', 'iamerica_db');
+$link = mysqli_connect('mysql.wminnovation.xyz', 'aleisha_walmart', '*******', 'iamerica_db');
 
 mysqli_set_charset($link, 'utf8');
 
